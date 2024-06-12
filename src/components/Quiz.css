@@ -1,0 +1,180 @@
+/* Centering the progress bar container */
+.progress-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px; /* Adjust height as needed */
+  width: 100%; /* Ensure the container takes full width */
+}
+
+/* Progress bar styles */
+#question_time {
+  width: 40%; /* Adjusted width for smaller size */
+  height: 10px;
+  appearance: none;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1); /* Changed background color */
+  overflow: hidden;
+  backdrop-filter: blur(5px);
+}
+
+#question_time::-webkit-progress-bar {
+  background: rgba(255, 255, 255, 0.1); /* Changed background color */
+}
+
+#question_time::-webkit-progress-value {
+  background: #4caf50; /* New background color for the progress value */
+  transition: width 0.1s linear;
+}
+
+#question_time::-moz-progress-bar {
+  background: #4caf50; /* New background color for the progress value */
+  transition: width 0.1s linear;
+}
+
+/* Other existing styles */
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(#180d27, #0c0219);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  color: #ffffff;
+}
+
+.quiz, #summary {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  width: 500px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  animation: fadeIn 1s ease-in-out;
+  text-align: center;
+}
+
+.QuizQuestion {
+  font-size: 1em;
+  margin-bottom: 10px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.question {
+  margin-bottom: 20px;
+}
+
+.question h2 {
+  font-size: 1.2em;
+  margin: 0;
+  color: #ffffff;
+}
+
+#answers {
+  list-style-type: none;
+  padding: 0;
+}
+
+.answer {
+  margin-bottom: 10px;
+}
+
+.answer button {
+  width: 100%;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+  backdrop-filter: blur(5px);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.answer button:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-3px);
+}
+
+.answer button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.25);
+}
+
+/* Summary styles */
+#summary {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#summary img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 20px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+#summary h2 {
+  font-size: 1.5em;
+  color: #ffffff;
+  margin: 0;
+}
+
+#mlogo {
+
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+
+}
+
+
+/* Styles for buttons */
+.answer button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Styles for selected answer */
+.answer button.selected {
+  background-color: #d3d3d3;
+}
+
+/* Styles for correct answer */
+.answer button.correct {
+  background-color: #4caf50;
+  color: white;
+}
+
+/* Styles for wrong answer */
+.answer button.wrong {
+  background-color: #f44336;
+  color: white;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
