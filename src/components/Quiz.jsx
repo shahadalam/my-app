@@ -1,4 +1,4 @@
-import { useCallback, useRef, useState } from "react";
+import { useCallback, useState } from "react";
 import question from "../question";
 import "./Quiz.css";
 import QuestionTimer from "./QuestionTimer";
@@ -36,10 +36,10 @@ export default function Quiz() {
   //   setUserAnswers((prevUserAnswers) => [...prevUserAnswers, selectedAnswer]);
   // }
 
-  const handleSkipAnswer = useCallback(
-    () => handleSelectAnswer(null),
-    [handleSelectAnswer]
-  );
+  // const handleSkipAnswer = useCallback(
+  //   () => handleSelectAnswer(null),
+  //   [handleSelectAnswer]
+  // );
   if (quizIsComplete) {
     return (
       <div id="summary">
