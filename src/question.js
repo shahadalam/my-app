@@ -1,4 +1,4 @@
-export default [
+const questions = [
     {
       id: 'q1',
       text: 'Which of the following definitions best describes a variable in programming?',
@@ -55,4 +55,6 @@ export default [
       correctAnswer: 'Structured Query Language'
     }
   ];
+
+  export default questions;
   
